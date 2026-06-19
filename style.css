@@ -445,6 +445,7 @@ body {
 .password input {
     display: flex;
     flex: 1;
+    outline: none;
     border: 0.5px solid #f1f1f1;
     padding: 10px 24px;
     border-radius: 10px;
@@ -538,5 +539,81 @@ body {
 }
 
 /* CSS halaman register */
+.nama-lengkap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
 
+.nama-lengkap input {
+    display: flex;
+    flex: 1;
+    padding: 10px 24px;
+    outline: none;
+    border: 0.5px solid #F1F1F1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
 
+.password-confirm {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.password-confirm input {
+    display: flex;
+    flex: 1;
+    padding: 10px 24px;
+    outline: none;
+    border: 0.5px solid #F1F1F1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.phone-number {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.country-code {
+    display: flex;
+    gap: 12px;
+
+}
+
+.country-code select{
+    display: flex;
+    padding: 10px 24px;
+    outline: none;
+    border: 0.5px solid #f1f1f1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.country-code input {
+    display: flex;
+    flex: 1;
+    outline: none;
+    border: 0.5px solid #f1f1f1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* tampilan mobile dimari */
+@media screen and (max-width: 768px) {
+
+}
