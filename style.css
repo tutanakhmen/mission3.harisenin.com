@@ -10,6 +10,7 @@ body {
 }
 
 .container {
+    width: calc(100% - 32px);
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -17,12 +18,13 @@ body {
 .navbar {
     background-color: white;
     padding: 12px 0;
-}
 
-.navbar .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    & .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    }
 }
 
 .navbar-kanan,
@@ -31,6 +33,50 @@ body {
     align-items: center;
 }
 
+.hamburger-mobile {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background-color: transparent;
+    border: none;
+
+    & span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #4A505C;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+    }
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 16px;
+    width: 200px;
+    padding: 10px;
+    gap: 4px;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    & a {
+        display: block;
+        text-decoration: none;
+        color: black;
+    }
+}
 
 .navbar-kiri img {
     height: 30px;
@@ -38,60 +84,68 @@ body {
     display: block;
 }
 
-.btn-login button,
-.btn-register button {
-    cursor: pointer;
-    margin: 0 5px;
-    padding: 10px 20px;
-    border-style: none;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+.btn-login,
+.btn-register {
+    & button {
+        cursor: pointer;
+        margin: 0 5px;
+        padding: 10px 20px;
+        border-style: none;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
 }
 
-.btn-login button {
-    background-color: #3ECF4C;
-    color: white;
+.btn-login {
+    & button {
+        background-color: #3ECF4C;
+        color: white;
+    }
 }
 
-.btn-register button {
-    background-color: white;
-    color: #3ECF4C;
-    border: #3ECF4C solid 1px;
+.btn-register {
+    & button {
+        background-color: white;
+        color: #3ECF4C;
+        border: #3ECF4C solid 1px;
+    }
 }
 
-.hero .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 82px 140px;
-    margin: 64px auto;
-    gap: 24px;
-    min-height: 60vh;
-    color: white;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8)), url(asset/hero.jpg);
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
+.hero {
+    & .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 82px 140px;
+        margin: 64px auto;
+        gap: 24px;
+        min-height: 60vh;
+        color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8)), url(asset/hero.jpg);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
 
-.hero h1 {
-    font-weight: 700px;
-    font-size: 48px;
-    text-align: center;
-}
+    & h1 {
+        font-weight: 700;
+        font-size: 48px;
+        text-align: center;
+    }
 
-.hero p {
-    font-weight: 500px;
-    font-size: 16px;
-    text-align: center;
+    & p {
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+    }
 }
 
 .btn-link button {
@@ -155,6 +209,7 @@ body {
 }
 
 .card-course {
+    display: block;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     background-color: white;
@@ -165,7 +220,7 @@ body {
     -o-border-radius: 10px;
 }
 
-.card-course img {
+.course-image {
     height: 180px;
     width: 100%;
     object-fit: cover;
@@ -242,20 +297,20 @@ body {
 }
 
 .newsletter-info h3 {
-    font-weight: 600px;
+    font-weight: 600;
     font-size: 32px;
     font-style: bold;
 }
 
 .newsletter-info p {
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 16px;
 }
 
 .subscribe {
     display: flex;
     justify-content: space-between;
-    width: 500px;
+    width: calc(100% - 500px) ;
     padding: 8px;
     background-color: white;
     border-radius: 10px;
@@ -311,13 +366,13 @@ body {
 }
 
 .footer-kiri h4 {
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 18px;
 }
 
 .footer-kiri p {
     color: #222325;
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 16px;
 
 }
@@ -374,11 +429,14 @@ body {
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 60px);
+    padding: 40px 0;
 }
 
 .login-register .container {
-    width: 600px;
+    max-width: 600px;
+
 }
+
 .container .login {
     display: flex;
     flex-direction: column;
@@ -395,6 +453,7 @@ body {
     display: flex;
     gap: 10px;
 }
+
 .header-login {
     display: flex;
     flex-direction: column;
@@ -512,10 +571,11 @@ body {
 
 .divider span {
     font-size: 16px;
-    padding: 0 20px ;
+    padding: 0 20px;
 }
 
-.divider::before, .divider::after {
+.divider::before,
+.divider::after {
     content: "";
     flex: 1;
     border: 0.5px solid #F1F1F1;
@@ -589,7 +649,7 @@ body {
 
 }
 
-.country-code select{
+.country-code select {
     display: flex;
     padding: 10px 24px;
     outline: none;
@@ -616,8 +676,148 @@ body {
 /* tampilan mobile dimari */
 @media screen and (max-width: 768px) {
     .container {
-        padding: 0 16px;
+        width: calc(100% - 32px);
+    }
+
+    /* navbar section */
+    .hamburger-mobile {
+        display: flex;
+    }
+
+    .hamburger-menu.active {
+        display: flex;
+    }
+
+    .navbar-kanan {
+        display: none;
+    }
+
+    /* ini hero section */
+    .hero .container {
+        padding: 64px 20px;
+    }
+
+    /* card section */
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .course-description {
+        display: none;
+    }
+
+    /* newsletter section */
+
+    .newsletter .container {
+        padding: 64px 20px;
+    }
+
+     .subscribe {
+        position: relative;
+        flex-direction: column;
+        width: calc(100% - 20px);
+     }
+
+     .btn-subscribe button{
+        position: absolute;
+        top: calc(100% + 12px);
+        width: calc(100% - 10px);
+     }
+
+
+    /* footer section */
+    .footer {
+        flex-direction: column;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+
+    /* halaman login */
+
+
+
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        width: calc(100% - 20px);
+    }
+
+    .course-tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* hero section */
+    .hero h1{
+        font-size: 24px;
+    }
+    /* card section */
+    .card-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-course {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .course-image {
+        width: 82px;
+        height: calc(100% - 12px);
+    }
+    .course-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .course-description {
+        display: none;
+    }
+
+    /* footer section */
+    .footer  {
+        padding: 40px 16px;
+        box-sizing: border-box;
+    }
+
+    .footer-kiri {
+        width: 100%;
+        & h4 {
+            font-size: 14px;
+        } 
+
+        & p {
+            font-size: 14px;
+        }
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 24px;
     }
 
 
+    .footer-kanan {
+ flex-direction: column;
+        gap: 24px;
+    }
+
+    .copyright {
+        padding: 5px;
+        border-top: 1px solid #3A35411F;
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    
 }
