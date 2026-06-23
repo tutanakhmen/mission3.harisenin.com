@@ -10,12 +10,12 @@ Tugas Mission 3A untuk membuat sebuah Landing Page responsif menggunakan HTML5, 
 ## 📸 Tampilan Proyek
 
 ### Tampilan Desktop & Mobile
-![Tampilan Desktop dan Mobile](asset/desktop1.jpg)
-![Tampilan Desktop dan Mobile](asset/desktop2.jpg)
-![Tampilan Desktop dan Mobile](asset/desktop3.jpg)
-![Tampilan Desktop dan Mobile](asset/Mobile1.jpg)
-![Tampilan Desktop dan Mobile](asset/Mobile2.jpg)
-![Tampilan Desktop dan Mobile](asset/Mobile3.jpg)
+![Tampilan Desktop dan Mobile](/asset/desktop1.png)
+![Tampilan Desktop dan Mobile](asset/desktop2.png)
+![Tampilan Desktop dan Mobile](asset/desktop3.png)
+![Tampilan Desktop dan Mobile](asset/Mobile1.png)
+![Tampilan Desktop dan Mobile](asset/Mobile2.png)
+![Tampilan Desktop dan Mobile](asset/Mobile3.png)
 
 ## 🛠️ Teknologi yang Digunakan
 - **HTML5:** Struktur halaman dan elemen semantik.
@@ -26,7 +26,7 @@ Tugas Mission 3A untuk membuat sebuah Landing Page responsif menggunakan HTML5, 
 Berdasarkan struktur repositori saat ini:
 ```text
 ├── asset/
-│   └── desktop1.jpg      # Dokumentasi tampilan proyek
+│   └──                   # seluruh asset web
 ├── index.html            # Halaman utama / Landing page
 ├── login.html            # Halaman masuk (Login)
 ├── register.html         # Halaman pendaftaran (Register)
